@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/events"
+            android:icon="@drawable/baseline_person_24"
+            android:title="Events"/>
+        <item
+            android:id="@+id/registration"
+            android:icon="@drawable/outline_account_box_24"
+            android:title="Registeration"/>
+        <item
+            android:id="@+id/maps"
+            android:icon="@drawable/outline_add_location_24"
+            android:title="Maps"/>
+        <item
+            android:id="@+id/gallery"
+            android:icon="@drawable/outline_add_location_24"
+            android:title="Gallery"/>
+        <item
+            android:id="@+id/ranking"
+            android:icon="@android:drawable/star_big_on"
+            android:title="Ranking"/>
+
+
+    </group>
+
+    <item
+        android:title="">
+
+        <menu>
+
+            <item
+                android:id="@+id/profile"
+                   android:icon="@drawable/baseline_person_24"
+                android:title="Profile"/>
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/baseline_person_24"
+                android:title="Logout"/>
+
+
+
+        </menu>
+    </item>
+
+
+
+
+
+</menu>
