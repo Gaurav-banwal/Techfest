@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "621397582671",
+    "project_id": "tech-fest-2f734",
+    "storage_bucket": "tech-fest-2f734.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621397582671:android:d8655ab872381f837b1b3a",
+        "android_client_info": {
+          "package_name": "com.example.techfest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2QqF6nwd0t8K_PHyqeTs4pxTJ0CDnbQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
