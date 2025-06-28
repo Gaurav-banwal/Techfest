@@ -9,9 +9,12 @@
     tools:context=".entry.frontpage">
 
     <LinearLayout
+        android:id="@+id/choice"
         android:layout_width="360dp"
         android:layout_height="68dp"
+        android:background="#BC9F9F"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +46,160 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:text="Guest" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login"
+        android:layout_width="381dp"
+        android:layout_height="243dp"
+        android:background="#BC9F9F"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/backl"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/outline_arrow_back_24" />
+
+        <EditText
+            android:id="@+id/emaill"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:ems="10"
+            android:hint="Login email"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/passwordl"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:hint="password"
+            android:inputType="textPassword" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/forgetpass"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:text="Forget PAssword?" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:text="Submit" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/registerpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="new to the app?" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/forlayout"
+        android:layout_width="381dp"
+        android:layout_height="243dp"
+        android:background="#BC9F9F"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/backf"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/outline_arrow_back_24" />
+
+        <EditText
+            android:id="@+id/emailf"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:ems="10"
+            android:hint="Forget email"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/formail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="send recovery mail" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/createaccount"
+        android:layout_width="381dp"
+        android:layout_height="243dp"
+        android:background="#BC9F9F"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backcr"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/outline_arrow_back_24" />
+
+        <EditText
+            android:id="@+id/emailcr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="New email "
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/passwordcr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/conpasswordcr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="confirm password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/submitcr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="create account" />
 
     </LinearLayout>
 

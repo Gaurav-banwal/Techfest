@@ -2,6 +2,7 @@ package com.example.techfest.entry
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,18 +23,56 @@ class frontpage : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        val intent = Intent(this,MainActivity::class.java)
+        binding.choice.visibility = View.VISIBLE
         binding.guest.setOnClickListener{
-           val intent = Intent(this,MainActivity::class.java)
+
             intent.putExtra("type_of_guest","guest")
+
+
             startActivity(intent)
         }
 
         binding.patricipant.setOnClickListener{
-            val intent = Intent(this,MainActivity::class.java)
+
             intent.putExtra("type_of_guest","participant")
+
+                binding.choice.visibility = View.GONE
+                binding.login.visibility = View.VISIBLE
+
+            binding.forgetpass.setOnClickListener{
+                binding.login.visibility = View.GONE
+                binding.forlayout.visibility = View.VISIBLE
+            }
+            binding.submit.setOnClickListener{
+                startActivity(intent)
+            }
+
+        }
+        binding.formail.setOnClickListener{
             startActivity(intent)
         }
+        binding.backl.setOnClickListener{
+            binding.login.visibility= View.GONE
+            binding.choice.visibility = View.VISIBLE
+        }
+        binding.backf.setOnClickListener {
+            binding.forlayout.visibility = View.GONE
+            binding.login.visibility = View.VISIBLE
+        }
+        binding.registerpass.setOnClickListener{
+            binding.login.visibility = View.GONE
+            binding.createaccount.visibility = View.VISIBLE
+
+            binding.backcr.setOnClickListener {
+                binding.createaccount.visibility = View.GONE
+                binding.login.visibility = View.VISIBLE
+            }
+            binding.submitcr.setOnClickListener{
+                startActivity(intent)
+            }
+        }
+
 
 
 
