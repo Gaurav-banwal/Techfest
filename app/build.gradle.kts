@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -42,6 +43,20 @@ android {
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.9.0")
     implementation ("androidx.drawerlayout:drawerlayout:1.1.1")
+
+    implementation ("com.google.firebase:firebase-auth:22.3.0")
+
+
+    implementation(libs.androidx.core.ktx)
+
+    implementation(libs.firebase.auth)
+
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.auth)
+   
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
