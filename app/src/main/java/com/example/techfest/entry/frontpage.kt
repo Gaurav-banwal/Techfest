@@ -157,7 +157,7 @@ class frontpage : AppCompatActivity() {
                 val pass = binding.passwordcr.text.toString().trim()
                 val conpass = binding.conpasswordcr.text.toString().trim()
 
-                if(pass.equals(conpass)) {
+                if (pass.equals(conpass)) {
 
 
                     auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
@@ -214,8 +214,8 @@ class frontpage : AppCompatActivity() {
                         }
                     }
 
-                }else{
-                    Toast.makeText(this,"passwords should be same",Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this, "passwords should be same", Toast.LENGTH_LONG).show()
                 }
 
 
@@ -242,10 +242,13 @@ class frontpage : AppCompatActivity() {
                             binding.forlayout.visibility = View.GONE
                             binding.login.visibility = View.VISIBLE
                         } else {
-                            Log.e("ResetPassword", "Failed to send reset email.", resetmail.exception)
+                            Log.e(
+                                "ResetPassword",
+                                "Failed to send reset email.",
+                                resetmail.exception
+                            )
                         }
                     }
-
 
 
             }

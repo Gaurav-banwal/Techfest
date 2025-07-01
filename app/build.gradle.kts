@@ -41,29 +41,54 @@ android {
 }
 
 dependencies {
+//    implementation("org.jetbrains.kotlin:kotlin-reflect:1.9.0")
+//    implementation ("androidx.drawerlayout:drawerlayout:1.1.1")
+//
+//    // Firebase BoM
+//    implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
+//    implementation("com.google.firebase:firebase-auth")
+//    implementation("com.google.firebase:firebase-firestore-ktx")
+//
+//
+//
+//    implementation(libs.androidx.core.ktx)
+//
+//
+//    implementation(libs.androidx.appcompat)
+//    implementation(libs.material)
+//    implementation(libs.androidx.activity)
+//    implementation(libs.androidx.constraintlayout)
+//    implementation(libs.firebase.auth)
+//
+//
+//    implementation(libs.androidx.core.ktx)
+//    implementation(libs.androidx.appcompat)
+//    implementation(libs.material)
+//    implementation(libs.androidx.activity)
+//    implementation(libs.androidx.constraintlayout)
+//    implementation(libs.androidx.gridlayout)
+//    testImplementation(libs.junit)
+//    androidTestImplementation(libs.androidx.junit)
+//    androidTestImplementation(libs.androidx.espresso.core)
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.9.0")
-    implementation ("androidx.drawerlayout:drawerlayout:1.1.1")
+    implementation("androidx.drawerlayout:drawerlayout:1.1.1")
 
-    implementation ("com.google.firebase:firebase-auth:22.3.0")
+    // Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore-ktx")
 
-
-    implementation(libs.androidx.core.ktx)
-
-    implementation(libs.firebase.auth)
-
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.firebase.auth)
-   
-
+    // AndroidX + Material
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.gridlayout)
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 }
