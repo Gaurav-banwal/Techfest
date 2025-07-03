@@ -2,6 +2,11 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.TechFest" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+            <!-- Customize your light theme here. -->
+            <item name="colorPrimary">@color/theme1</item>
+            <item name="colorPrimaryVariant">@color/theme2</item>
+            <item name="android:statusBarColor">@color/theme3</item>
+
     </style>
 </resources>

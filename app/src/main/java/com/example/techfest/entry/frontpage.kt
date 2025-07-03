@@ -9,11 +9,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.example.techfest.MainActivity
 import com.example.techfest.R
 import com.example.techfest.databinding.ActivityFrontpageBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthException
+import kotlinx.coroutines.Delay
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class frontpage : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -30,7 +34,12 @@ class frontpage : AppCompatActivity() {
         }
         auth = FirebaseAuth.getInstance()
         val intent = Intent(this, MainActivity::class.java)
-        binding.choice.visibility = View.VISIBLE
+        lifecycleScope.launch {
+            delay(1500L)
+            binding.choice.visibility = View.VISIBLE
+        }
+
+
         binding.guest.setOnClickListener {
 
             intent.putExtra("type_of_guest", "guest")

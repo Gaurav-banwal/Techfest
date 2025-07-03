@@ -5,202 +5,266 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/theme1"
+    android:background="@drawable/way_background"
+
     tools:context=".entry.frontpage">
 
-    <LinearLayout
-        android:id="@+id/choice"
-        android:layout_width="360dp"
-        android:layout_height="68dp"
-        android:background="#BC9F9F"
-        android:orientation="horizontal"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/patricipant"
-            android:layout_width="69dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:text="Particpant" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:text="TextView"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/guest"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:text="Guest" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/login"
-        android:layout_width="381dp"
-        android:layout_height="243dp"
-        android:background="#BC9F9F"
-        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="16dp"
         android:visibility="gone"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-
-        <ImageButton
-            android:id="@+id/backl"
-            android:layout_width="67dp"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            app:srcCompat="@drawable/outline_arrow_back_24" />
-
-        <EditText
-            android:id="@+id/emaill"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:ems="10"
-            android:hint="Login email"
-            android:inputType="text" />
-
-        <EditText
-            android:id="@+id/passwordl"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:ems="10"
-            android:hint="password"
-            android:inputType="textPassword" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+
+            android:layout_width="381dp"
+            android:layout_height="243dp"
+            android:background="#05173E"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <ImageButton
+                android:id="@+id/backl"
+                android:layout_width="76dp"
+                android:layout_height="35dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+
+                app:srcCompat="@drawable/outline_arrow_back_24" />
+
+            <EditText
+                android:id="@+id/emaill"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="Login email"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="#C8B8B8" />
+
+            <EditText
+                android:id="@+id/passwordl"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:textColorHint="#C8B8B8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/forgetpass"
+                    android:layout_width="168dp"
+                    android:layout_height="wrap_content"
+                    android:text="Forget PAssword?"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="1"
+                    android:text="Submit" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/forgetpass"
-                android:layout_width="168dp"
+                android:id="@+id/registerpass"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Forget PAssword?" />
+                android:gravity="center"
+                android:shadowColor="@color/white"
+                android:text="new to the app?"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/forlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+
+            android:layout_width="369dp"
+            android:layout_height="165dp"
+            android:background="#05173E"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <ImageButton
+                android:id="@+id/backf"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/outline_arrow_back_24" />
+
+            <EditText
+                android:id="@+id/emailf"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="Forget email"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="#C8B8B8" />
 
             <Button
-                android:id="@+id/submit"
+                android:id="@+id/formail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_weight="1"
-                android:text="Submit" />
+                android:layout_gravity="right"
+                android:text="send recovery mail" />
+
         </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/registerpass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="new to the app?" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/forlayout"
-        android:layout_width="381dp"
-        android:layout_height="243dp"
-        android:background="#BC9F9F"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <ImageButton
-            android:id="@+id/backf"
-            android:layout_width="67dp"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            app:srcCompat="@drawable/outline_arrow_back_24" />
-
-        <EditText
-            android:id="@+id/emailf"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:ems="10"
-            android:hint="Forget email"
-            android:inputType="text" />
-
-        <Button
-            android:id="@+id/formail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="send recovery mail" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/createaccount"
-        android:layout_width="381dp"
-        android:layout_height="243dp"
-        android:background="#BC9F9F"
-        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="16dp"
         android:visibility="gone"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/backcr"
-            android:layout_width="67dp"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            app:srcCompat="@drawable/outline_arrow_back_24" />
+        <LinearLayout
 
-        <EditText
-            android:id="@+id/emailcr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="New email "
-            android:inputType="text" />
+            android:layout_width="381dp"
+            android:layout_height="243dp"
+            android:background="#05173E"
+            android:orientation="vertical"
+            android:visibility="visible">
 
-        <EditText
-            android:id="@+id/passwordcr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="password"
-            android:inputType="textPassword" />
+            <ImageButton
+                android:id="@+id/backcr"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/outline_arrow_back_24" />
 
-        <EditText
-            android:id="@+id/conpasswordcr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="confirm password"
-            android:inputType="textPassword" />
+            <EditText
+                android:id="@+id/emailcr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="New email "
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="#C8B8B8" />
 
-        <Button
-            android:id="@+id/submitcr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="create account" />
+            <EditText
+                android:id="@+id/passwordcr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:textColorHint="#C8B8B8" />
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/conpasswordcr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="confirm password"
+                android:inputType="textPassword"
+                android:textColorHint="#C8B8B8" />
+
+            <Button
+                android:id="@+id/submitcr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="create account" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+
+            android:layout_width="360dp"
+            android:layout_height="68dp"
+            android:background="#111D57"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/patricipant"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="Particpant" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="__OR__"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/guest"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="Guest" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

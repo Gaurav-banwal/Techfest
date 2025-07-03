@@ -3,6 +3,7 @@ package com.example.techfest
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.provider.ContactsContract.Profile
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
@@ -102,11 +103,12 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
         {
             R.id.events -> replacefragment(event())
             R.id.gallery -> replacefragment(gallery())
-            R.id.maps -> { startActivity(Intent(this,mapact::class.java))
+            R.id.maps -> { replacefragment(mapact())
             }
             R.id.ranking -> replacefragment(ranking())
             R.id.registration -> replacefragment(registration())
-
+             R.id.profile-> {startActivity(Intent(this,Profile::class.java))}
+            R.id.logout -> finish()
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true

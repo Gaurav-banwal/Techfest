@@ -8,8 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.techfest.R
 
-class EventAdapter(private val events: List<Event>) :
+class EventAdapter(private val events: List<Event>, private val onItemClick: (Event) -> Unit) :
     RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
+
 
     class EventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name: TextView = itemView.findViewById(R.id.event_name)
@@ -29,6 +30,11 @@ class EventAdapter(private val events: List<Event>) :
         holder.name.text = event.name
                 holder.description.text = event.description
         holder.image.setImageResource(event.imageResId)
+
+        holder.itemView.setOnClickListener {
+            onItemClick(event)
+        }
+
     }
 
     override fun getItemCount() = events.size

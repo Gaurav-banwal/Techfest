@@ -58,7 +58,7 @@ class event : Fragment() {
                 for (doc in snapshot.documents) {
 
                     val eventob = doc.toObject(Event::class.java)
-                    Toast.makeText(requireContext(), "entered", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(requireContext(), "entered", Toast.LENGTH_SHORT).show()
                     if (eventob != null) {
                         // 🔁 Match event name to local image
                         eventob.imageResId = when (eventob.name.lowercase()) {
@@ -73,7 +73,20 @@ class event : Fragment() {
                     }
                 }
 
-                adapter = EventAdapter(eventList)
+                adapter = EventAdapter(eventList){
+                    clevent->
+                    val bundle = Bundle()
+                    bundle.putString("eventname", clevent.name.toString())
+
+                    val fragment = edetails()
+                    fragment.arguments = bundle
+
+                    requireActivity().supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, fragment)
+                        .addToBackStack(null)
+                        .commit()
+
+                }
                 binding.eventRecycleView.layoutManager = GridLayoutManager(requireContext(), 2)
                 binding.eventRecycleView.adapter = adapter
                 Log.d("Adapter", "Item count: ${adapter.itemCount}")
