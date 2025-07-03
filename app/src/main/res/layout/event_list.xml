@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#B68080"
     android:padding="2dp">
 
     <View
-        android:id="@+id/dot"
+        android:id="@+id/doti"
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:background="@drawable/dot"
@@ -20,8 +21,8 @@
         android:layout_marginStart="6dp"
         android:background="@color/theme1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@id/dot"
-        app:layout_constraintTop_toBottomOf="@id/dot" />
+        app:layout_constraintStart_toStartOf="@id/doti"
+        app:layout_constraintTop_toBottomOf="@id/doti" />
 
     <TextView
         android:id="@+id/time"
@@ -31,8 +32,8 @@
         android:text="12:51 PM"
         android:textColor="@android:color/darker_gray"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/dot"
-        app:layout_constraintTop_toTopOf="@id/dot" />
+        app:layout_constraintStart_toEndOf="@id/doti"
+        app:layout_constraintTop_toTopOf="@id/doti" />
 
     <View
         android:id="@+id/horizontal_line"
@@ -56,7 +57,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/dot"
+        app:layout_constraintStart_toEndOf="@id/doti"
         app:layout_constraintTop_toBottomOf="@id/time" />
 
     <TextView
