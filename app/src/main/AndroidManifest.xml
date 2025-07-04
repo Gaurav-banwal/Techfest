@@ -14,18 +14,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechFest"
         tools:targetApi="31">
-        <activity
-            android:name=".entry.Profle"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".freatures.mapact"
-            android:exported="false" />
+            android:name=".entry.Profile"
+            android:exported="false"/>
+
         <activity
             android:name=".entry.frontpage"
             android:exported="true">
+
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

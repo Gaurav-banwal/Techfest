@@ -35,10 +35,10 @@ class edetails : Fragment() {
     ): View? {
         _binding = FragmentEdetailsBinding.inflate(inflater, container, false)
 
-       // Toast.makeText(requireContext(),eventtype,Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(),eventtype,Toast.LENGTH_SHORT).show()
 
 
-        Toast.makeText(requireContext(), eventtype ?: "No event type", Toast.LENGTH_SHORT).show()
+
 
         db = FirebaseFirestore.getInstance()
         adapter = EDetailAdapter()

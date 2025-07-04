@@ -3,7 +3,8 @@ package com.example.techfest
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.provider.ContactsContract.Profile
+import com.example.techfest.entry.Profile
+
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
@@ -23,10 +24,14 @@ import com.example.techfest.freatures.mapact
 import com.example.techfest.freatures.ranking
 import com.example.techfest.freatures.registration
 import com.google.android.material.navigation.NavigationView
+import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var drawerLayout: DrawerLayout
+    private lateinit var tyuser:String
+    private var restrict :Boolean =false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +44,8 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
 //            v.setPadding(0, topInset, 0,0)
 //            insets
 //        }
+        tyuser = intent.getStringExtra("type_of_guest").toString()
+          restrict = if(tyuser=="participant") true else false
 
         drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
         val toolbar= findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
@@ -106,8 +113,11 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
             R.id.maps -> { replacefragment(mapact())
             }
             R.id.ranking -> replacefragment(ranking())
-            R.id.registration -> replacefragment(registration())
-             R.id.profile-> {startActivity(Intent(this,Profile::class.java))}
+            R.id.registration ->{  if(restrict)replacefragment(registration())
+                              else Toast.makeText(this,"register as guest",Toast.LENGTH_SHORT).show()}
+             R.id.profile-> {  if(restrict)startActivity(Intent(this,Profile::class.java))
+                             else Toast.makeText(this,"register as guest",Toast.LENGTH_SHORT).show()}
+
             R.id.logout -> finish()
         }
         drawerLayout.closeDrawer(GravityCompat.START)

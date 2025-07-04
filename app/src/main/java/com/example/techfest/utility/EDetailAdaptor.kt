@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.techfest.R
 import java.text.SimpleDateFormat
@@ -38,13 +37,10 @@ class EDetailAdapter : RecyclerView.Adapter<EDetailAdapter.EventViewHolder>() {
 
     override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
         val event = events[position]
-        val context = holder.itemView.context
 
         val eventTime = event.startTime.toDate()
         val now = Date()
-
-        // Determine end time from next event's startTime
-        val isLastEvent = position == events.lastIndex
+        val isLastEvent = (position == events.lastIndex)
         val endTime = if (!isLastEvent) {
             events[position + 1].startTime.toDate()
         } else {
@@ -65,12 +61,10 @@ class EDetailAdapter : RecyclerView.Adapter<EDetailAdapter.EventViewHolder>() {
         holder.date.text = "Date: ${dateFormatter.format(eventTime)}"
         holder.venue.text = "Venue: ${event.venue}"
 
-        // Change line color if event is done
-        val isDone = now.after(eventTime)
-        // 🎯 Show dot if event has started
+
+
         holder.doti.visibility = if (now >= eventTime) View.VISIBLE else View.GONE
 
-        // 📏 Show line only if not last event AND next event has started
         holder.line.visibility = if (!isLastEvent && now >= endTime) View.VISIBLE else View.GONE
 
     }
