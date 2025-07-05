@@ -26,6 +26,7 @@
         android:layout_height="49dp"
         android:layout_marginTop="83dp"
         android:text="TextView"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toStartOf="parent"

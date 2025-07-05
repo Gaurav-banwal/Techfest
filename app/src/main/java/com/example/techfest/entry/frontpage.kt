@@ -85,6 +85,7 @@ class frontpage : AppCompatActivity() {
                                         "Login successful!",
                                         Toast.LENGTH_SHORT
                                     ).show()
+                                    intent.putExtra("useremail",emailc)
                                     startActivity(intent)
                                     //Toast.makeText(this, "yes", Toast.LENGTH_LONG).show()
                                     Log.d(
