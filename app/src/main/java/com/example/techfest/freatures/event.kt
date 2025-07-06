@@ -46,6 +46,7 @@ class event : Fragment() {
 
 
     private fun fetchEventsFromFirestore() {
+        binding.progressBar.visibility=View.VISIBLE
         FirebaseFirestore.getInstance().collection("event")
             .get()
             .addOnSuccessListener { snapshot ->
@@ -89,6 +90,7 @@ class event : Fragment() {
                 }
                 binding.eventRecycleView.layoutManager = GridLayoutManager(requireContext(), 2)
                 binding.eventRecycleView.adapter = adapter
+                binding.progressBar.visibility=View.GONE
                 Log.d("Adapter", "Item count: ${adapter.itemCount}")
             }
             .addOnFailureListener { exception ->
