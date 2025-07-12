@@ -35,31 +35,80 @@
             <ImageButton
                 android:id="@+id/backl"
                 android:layout_width="76dp"
-                android:layout_height="35dp"
+                android:layout_height="42dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
 
                 app:srcCompat="@drawable/outline_arrow_back_24" />
 
-            <EditText
-                android:id="@+id/emaill"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:backgroundTint="@color/white"
-                android:ems="10"
-                android:hint="Login email"
-                android:inputType="text"
-                android:textColor="@color/white"
-                android:textColorHint="#C8B8B8" />
+            <!--            <EditText-->
+            <!--                android:id="@+id/emaill"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="65dp"-->
+            <!--                android:backgroundTint="@color/white"-->
+            <!--                android:ems="10"-->
+            <!--                android:hint="Login email"-->
+            <!--                android:inputType="text"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textColorHint="#C8B8B8" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ematr"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-            <EditText
-                android:id="@+id/passwordl"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:backgroundTint="@color/white"
-                android:ems="10"
-                android:hint="password"
-                android:inputType="textPassword"
-                android:textColorHint="#C8B8B8" />
+                android:layout_height="wrap_content"
+                android:hint="Login"
+                android:padding="5dp"
+                app:boxBackgroundMode="filled"
+
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:hintEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emaill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="textPersonName" /> <!-- Optional, hint is usually set on the layout -->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/passwordl"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="55dp"-->
+            <!--                android:backgroundTint="@color/white"-->
+            <!--                android:ems="10"-->
+            <!--                android:hint="password"-->
+            <!--                android:inputType="textPassword"-->
+            <!--                android:textColorHint="#C8B8B8" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ematr2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/theme1"
+                android:hint="Password"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                app:boxBackgroundMode="filled"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="textPersonName" /> <!-- Optional, hint is usually set on the layout -->
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -120,20 +169,47 @@
             <ImageButton
                 android:id="@+id/backf"
                 android:layout_width="67dp"
-                android:layout_height="wrap_content"
+                android:layout_height="37dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 app:srcCompat="@drawable/outline_arrow_back_24" />
 
-            <EditText
-                android:id="@+id/emailf"
+            <!--            <EditText-->
+            <!--                "android:id="@+id/emailf-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="65dp"-->
+            <!--                android:backgroundTint="@color/white"-->
+            <!--                android:ems="10"-->
+            <!--                android:hint="Forget email"-->
+            <!--                android:inputType="text"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textColorHint="#C8B8B8" />-->
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ematee"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:backgroundTint="@color/white"
-                android:ems="10"
-                android:hint="Forget email"
-                android:inputType="text"
-                android:textColor="@color/white"
-                android:textColorHint="#C8B8B8" />
+                android:layout_height="wrap_content"
+                android:hint="Forget password"
+                android:padding="5dp"
+                app:boxBackgroundMode="filled"
+
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:hintEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="textPersonName" /> <!-- Optional, hint is usually set on the layout -->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <Button
                 android:id="@+id/formail"
@@ -147,8 +223,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/createaccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="386dp"
+        android:layout_height="276dp"
 
         android:layout_margin="16dp"
         android:visibility="gone"
@@ -161,8 +237,8 @@
 
         <LinearLayout
 
-            android:layout_width="381dp"
-            android:layout_height="243dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="#05173E"
             android:orientation="vertical"
             android:visibility="visible">
@@ -174,36 +250,109 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 app:srcCompat="@drawable/outline_arrow_back_24" />
 
-            <EditText
-                android:id="@+id/emailcr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:ems="10"
-                android:hint="New email "
-                android:inputType="text"
-                android:textColor="@color/white"
-                android:textColorHint="#C8B8B8" />
+            <!--            <EditText-->
+            <!--                android:id="@+id/emailcr"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:backgroundTint="@color/white"-->
+            <!--                android:ems="10"-->
+            <!--                android:hint="New email "-->
+            <!--                android:inputType="text"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textColorHint="#C8B8B8" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ematef"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-            <EditText
-                android:id="@+id/passwordcr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:ems="10"
-                android:hint="password"
-                android:inputType="textPassword"
-                android:textColorHint="#C8B8B8" />
+                android:hint="New Email"
+                android:padding="5dp"
+                app:boxBackgroundMode="filled"
 
-            <EditText
-                android:id="@+id/conpasswordcr"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:hintEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailcr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="textPersonName" /> <!-- Optional, hint is usually set on the layout -->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/passwordcr"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:backgroundTint="@color/white"-->
+            <!--                android:ems="10"-->
+            <!--                android:hint="password"-->
+            <!--                android:inputType="textPassword"-->
+            <!--                android:textColorHint="#C8B8B8" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ematew"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:ems="10"
-                android:hint="confirm password"
-                android:inputType="textPassword"
-                android:textColorHint="#C8B8B8" />
+                android:hint="Password"
+                android:padding="5dp"
+                app:boxBackgroundMode="filled"
+
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:hintEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordcr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="textPersonName" /> <!-- Optional, hint is usually set on the layout -->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/conpasswordcr"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:backgroundTint="@color/white"-->
+            <!--                android:ems="10"-->
+            <!--                android:hint="confirm password"-->
+            <!--                android:inputType="textPassword"-->
+            <!--                android:textColorHint="#C8B8B8" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ematewe"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm Password"
+                android:padding="5dp"
+                app:boxBackgroundMode="filled"
+
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:hintEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/conpasswordcr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="textPersonName" /> <!-- Optional, hint is usually set on the layout -->
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/submitcr"

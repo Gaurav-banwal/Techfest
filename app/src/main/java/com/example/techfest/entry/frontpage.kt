@@ -27,13 +27,21 @@ class frontpage : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityFrontpageBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         auth = FirebaseAuth.getInstance()
         val intent = Intent(this, MainActivity::class.java)
+        if(auth.currentUser!=null)
+        {
+            intent.putExtra("type_of_guest", "participant")
+            startActivity(intent)
+        }
+
         lifecycleScope.launch {
             delay(1500L)
             binding.choice.visibility = View.VISIBLE
@@ -85,7 +93,7 @@ class frontpage : AppCompatActivity() {
                                         "Login successful!",
                                         Toast.LENGTH_SHORT
                                     ).show()
-                                    intent.putExtra("useremail",emailc)
+                                    intent.putExtra("useremail", emailc)
                                     startActivity(intent)
                                     //Toast.makeText(this, "yes", Toast.LENGTH_LONG).show()
                                     Log.d(

@@ -27,9 +27,6 @@ class event : Fragment() {
         super.onCreate(savedInstanceState)
 
 
-
-
-
     }
 
     override fun onCreateView(
@@ -40,13 +37,13 @@ class event : Fragment() {
 
 
 
-         fetchEventsFromFirestore()
+        fetchEventsFromFirestore()
         return binding.root
     }
 
 
     private fun fetchEventsFromFirestore() {
-        binding.progressBar.visibility=View.VISIBLE
+        binding.progressBar.visibility = View.VISIBLE
         FirebaseFirestore.getInstance().collection("event")
             .get()
             .addOnSuccessListener { snapshot ->
@@ -66,7 +63,7 @@ class event : Fragment() {
                             "techquiz" -> R.drawable.techquiz
                             "hackathon" -> R.drawable.hackathon
                             "concert" -> R.drawable.concert
-                            "robowar" ->R.drawable.robowar
+                            "robowar" -> R.drawable.robowar
                             else -> R.drawable.placeholder // default image
                         }
                         Log.d("Firestore", "Parsed event: $eventob")
@@ -74,8 +71,7 @@ class event : Fragment() {
                     }
                 }
 
-                adapter = EventAdapter(eventList){
-                    clevent->
+                adapter = EventAdapter(eventList) { clevent ->
                     val bundle = Bundle()
                     bundle.putString("eventname", clevent.name.toString())
 
@@ -90,7 +86,7 @@ class event : Fragment() {
                 }
                 binding.eventRecycleView.layoutManager = GridLayoutManager(requireContext(), 2)
                 binding.eventRecycleView.adapter = adapter
-                binding.progressBar.visibility=View.GONE
+                binding.progressBar.visibility = View.GONE
                 Log.d("Adapter", "Item count: ${adapter.itemCount}")
             }
             .addOnFailureListener { exception ->
@@ -99,7 +95,6 @@ class event : Fragment() {
             }
 
     }
-
 
 
 }

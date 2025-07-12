@@ -24,13 +24,14 @@ import com.example.techfest.freatures.mapact
 import com.example.techfest.freatures.ranking
 import com.example.techfest.freatures.registration
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 import kotlin.properties.Delegates
 
-class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var drawerLayout: DrawerLayout
-    private lateinit var tyuser:String
-    private var restrict :Boolean =false
+    private lateinit var tyuser: String
+    private var restrict: Boolean = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,11 +46,11 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
 //            insets
 //        }
         tyuser = intent.getStringExtra("type_of_guest").toString()
-          restrict = if(tyuser=="participant") true else false
+        restrict = if (tyuser == "participant") true else false
 
         drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
-        val toolbar= findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
-        toolbar.navigationIcon = ContextCompat.getDrawable(this,R.drawable.techfestlogoham)
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        toolbar.navigationIcon = ContextCompat.getDrawable(this, R.drawable.techfestlogoham)
 
         setSupportActionBar(toolbar)
 
@@ -58,7 +59,8 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
         navigationView.setNavigationItemSelectedListener(this)
 
 
-        val toogle = ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navopen,R.string.navclose)
+        val toogle =
+            ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navopen, R.string.navclose)
         drawerLayout.addDrawerListener(toogle)
 //         toogle.syncState()
 
@@ -70,35 +72,28 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
 
         //set the default fragment
 
-        if(savedInstanceState==null)
-        {
+        if (savedInstanceState == null) {
             replacefragment(event())
             navigationView.setCheckedItem(R.id.events)
         }
 
 
-
-
-
     }
-    private fun replacefragment(fragment: Fragment)
-    {
+
+    private fun replacefragment(fragment: Fragment) {
         val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container,fragment)
+        transaction.replace(R.id.fragment_container, fragment)
         transaction.commit()
     }
-
 
 
     @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
 
-        if(drawerLayout.isDrawerOpen(GravityCompat.START))
-        {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
 
-        }
-        else{
+        } else {
             onBackPressedDispatcher.onBackPressed()
         }
 
@@ -106,26 +101,34 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when(item.itemId)
-        {
+        when (item.itemId) {
             R.id.events -> replacefragment(event())
             R.id.gallery -> replacefragment(gallery())
-            R.id.maps -> { replacefragment(mapact())
+            R.id.maps -> {
+                replacefragment(mapact())
             }
-            R.id.ranking -> replacefragment(ranking())
-            R.id.registration ->{  if(restrict)replacefragment(registration())
-                              else Toast.makeText(this,"register as guest",Toast.LENGTH_SHORT).show()}
-             R.id.profile-> {  if(restrict)startActivity(Intent(this,Profile::class.java))
-                             else Toast.makeText(this,"register as guest",Toast.LENGTH_SHORT).show()}
 
-            R.id.logout -> finish()
+            R.id.ranking -> replacefragment(ranking())
+            R.id.registration -> {
+                if (restrict) replacefragment(registration())
+                else Toast.makeText(this, "register as guest", Toast.LENGTH_SHORT).show()
+            }
+
+            R.id.profile -> {
+                if (restrict) startActivity(Intent(this, Profile::class.java))
+                else Toast.makeText(this, "register as guest", Toast.LENGTH_SHORT).show()
+            }
+
+            R.id.logout -> {
+                FirebaseAuth.getInstance().signOut()
+                finish()}
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
 
 
-    }
+}
 
 
 

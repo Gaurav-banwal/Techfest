@@ -51,7 +51,7 @@ class Profile : AppCompatActivity() {
          db = FirebaseFirestore.getInstance()
          currentuser = auth.currentUser!!
      // Toast.makeText(this,currentuser.email,Toast.LENGTH_SHORT).show()
-           val usermail = intent.getStringExtra("useremail")
+           val usermail = currentuser.email
          binding.profEmail.text = currentuser.email
 
 

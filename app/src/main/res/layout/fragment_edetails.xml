@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/way_background"
     tools:context=".freatures.edetails">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/edetail_list"
-        android:layout_width="352dp"
-        android:layout_height="555dp"
+        android:layout_width="381dp"
+        android:layout_height="637dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

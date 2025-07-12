@@ -50,7 +50,6 @@ class edetails : Fragment() {
 
         eventtype?.let { fetchDetails(it) }
 
-        // Inflate the layout for this fragment
         return binding.root
     }
 
