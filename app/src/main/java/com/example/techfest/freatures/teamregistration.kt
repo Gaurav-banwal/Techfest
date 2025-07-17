@@ -9,11 +9,11 @@ import android.widget.Toast
 import androidx.fragment.app.FragmentTransaction
 import com.example.techfest.R
 import com.example.techfest.databinding.FragmentEdetailsBinding
-import com.example.techfest.databinding.FragmentRegistrationBinding
+import com.example.techfest.databinding.FragmentTeamregistrationBinding
 
 
-class registration : Fragment() {
-    private var _binding: FragmentRegistrationBinding? = null
+class teamregistration : Fragment() {
+    private var _binding: FragmentTeamregistrationBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,14 +25,13 @@ class registration : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
+        _binding = FragmentTeamregistrationBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
-        binding.selfbuttonsin.setOnClickListener {
-            Toast.makeText(requireContext(),"you are already in individual", Toast.LENGTH_SHORT).show()
+        binding.indivisualreg.setOnClickListener {
+            replacefragment(registration())
         }
-
-        binding.teamreg.setOnClickListener {
-            replacefragment(teamregistration())
+        binding.teamregself.setOnClickListener {
+            Toast.makeText(requireContext(),"Already in Team Registration", Toast.LENGTH_SHORT).show()
         }
         return binding.root
     }

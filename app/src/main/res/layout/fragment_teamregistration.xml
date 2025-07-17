@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/way_background"
-    tools:context=".freatures.registration">
+    tools:context=".freatures.teamregistration">
+
 
     <Button
-        android:id="@+id/selfbuttonsin"
+        android:id="@+id/indivisualreg"
         android:layout_width="145dp"
         android:layout_height="48dp"
         android:layout_marginStart="20dp"
@@ -17,13 +18,13 @@
         android:background="@android:color/transparent"
         android:text="Individual"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/teamreg"
+        app:layout_constraintEnd_toStartOf="@+id/teamregself"
         app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/teamreg"
+        android:id="@+id/teamregself"
         android:layout_width="145dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
@@ -39,21 +40,9 @@
         android:layout_width="145dp"
         android:layout_height="6dp"
         android:background="@color/theme1"
-        app:layout_constraintEnd_toEndOf="@+id/selfbuttonsin"
-        app:layout_constraintStart_toStartOf="@+id/selfbuttonsin"
-        app:layout_constraintTop_toBottomOf="@+id/selfbuttonsin" />
+        app:layout_constraintEnd_toEndOf="@+id/teamregself"
+        app:layout_constraintStart_toStartOf="@+id/teamregself"
+        app:layout_constraintTop_toBottomOf="@+id/teamregself" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="230dp"
-        android:layout_height="66dp"
-        android:layout_marginBottom="264dp"
-        android:text="indidual"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.425"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
