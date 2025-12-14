@@ -4,7 +4,7 @@
 [![Language](https://img.shields.io/badge/Language-Kotlin-7F52FF.svg?style=flat-square)](https://kotlinlang.org/)
 [![UI](https://img.shields.io/badge/UI-XML-4285F4.svg?style=flat-square)](https://developer.android.com/)
 [![Backend](https://img.shields.io/badge/Backend-Firebase-FFCA28.svg?style=flat-square)](https://firebase.google.com/)
-[![License](https://imgugs.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
 ## ✨ Project Summary
 
