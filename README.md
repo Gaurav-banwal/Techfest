@@ -1,23 +1,64 @@
-##Tech Fest 
+# 🚀 Tech Fest Mobile Companion App
 
+[![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://developer.android.com/)
+[![Language](https://img.shields.com/badge/Language-Kotlin-orange.svg)](https://kotlinlang.org/)
+[![UI](https://img.shields.com/badge/UI-XML_Layouts-blue.svg)](https://developer.android.com/)
+[![Backend](https://img.shields.com/badge/Backend-Firebase-FFCA28.svg)](https://firebase.google.com/)
+[![Status](https://img.shields.com/badge/Status-Completed-success)](/demovideo.mp4)
+[![License](https://img.shields.com/badge/License-MIT-blue.svg)](LICENSE)
 
+## ✨ Project Summary
 
-![WhatsApp Image 2025-08-11 at 20 42 03_58e6fc93](https://github.com/user-attachments/assets/2ec4427b-d91b-4a31-a278-2a698508c748)
-![WhatsApp Image 2025-08-11 at 20 42 03_5fa4c18b](https://github.com/user-attachments/assets/306bc76b-15b8-46ff-a6ca-5ca5d0ab72e1)
+The **Tech Fest Mobile Companion App** is a robust, native Android application designed to centralize and enhance the experience of a technical festival. Built using **Kotlin and XML** and utilizing **Google Firebase** for the backend, the app provides attendees with dynamic, real-time event tracking, seamless registration, and interactive ranking updates.
 
-##Features implemented
-1. Event display with growing bar according to time , changeable by firebase 
-2. individual registration
-3. profile
-4. ranking 
-5. custom auth and login with forget password 
+## 🌟 Implemented Features
 
-##Technology used 
-1.kotlin 
-2. firebase 
+This application showcases full-stack mobile development capabilities across five core features:
 
-##Team memebers
-1. Gaurav Banwal(2024imt026)
+1.  **Dynamic Event Schedule & Status:**
+    * **Real-time Updates:** Event times and statuses are managed and updated via the Firebase backend.
+    * **Visual Progress Bar:** Each event displays a **"Growing Bar"** that visually represents its time progress.
 
-##Demo video  
-[Watch demo video](https://github.com/Gaurav-banwal/Techfest/blob/master/demovideo.mp4)
+2.  **Individual Event Registration:**
+    * Allows participants to register for multiple events directly within the mobile app.
+
+3.  **Personalized Profile Management:**
+    * A dedicated user profile area for viewing registration history and managing account settings.
+
+4.  **Real-Time Ranking System:**
+    * Displays dynamic leaderboards for competitive events, integrating data directly from Firebase.
+
+5.  **Custom Authentication and Security:**
+    * **Custom Auth:** Secure user registration and login implemented using Firebase Authentication.
+    * Includes **Forget Password** functionality for account recovery.
+
+## 💻 Technology Stack
+
+| Category | Technology |
+| :--- | :--- |
+| **Primary Language** | **Kotlin** |
+| **UI Framework** | **Android XML** |
+| **Backend/Database** | **Google Firebase** (Auth, Firestore/Realtime DB) |
+| **Build System** | **Gradle** |
+
+## 📹 Demo Video
+
+Explore the dynamic features, authentication flow, and ranking updates in the full demonstration video:
+
+[**Watch the Tech Fest App Demo Video**](https://github.com/Gaurav-banwal/Techfest/blob/master/demovideo.mp4)
+
+---
+
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1.  Fork the Project.
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
+4.  Push to the Branch (`git push origin feature/AmazingFeature`).
+5.  Open a Pull Request.
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
