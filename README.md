@@ -42,10 +42,16 @@ This application showcases full-stack mobile development capabilities across fiv
 
 ## 📹 Demo Video
 
-Explore the dynamic features, authentication flow, and ranking updates in the full demonstration video:
+<p align="center">
+    <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</p>
 
-[**Watch the Tech Fest App Demo Video**](https://github.com/Gaurav-banwal/Techfest/blob/master/demovideo.mp4)
-
+[View Video on GitHub File Page](https://github.com/Gaurav-banwal/Techfest/blob/master/demovideo.mp4)
 ---
 
 ## 🤝 Contributing
