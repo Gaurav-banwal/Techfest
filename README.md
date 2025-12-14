@@ -44,7 +44,7 @@ This application showcases full-stack mobile development capabilities across fiv
 
 <p align="center">
     <iframe width="560" height="315" 
-        src="https://youtu.be/_1z3-reWxJA" 
+        src="https://youtu.be/_1z3-reWxJA?si=eLIWnJmrxAcTdR-g" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
