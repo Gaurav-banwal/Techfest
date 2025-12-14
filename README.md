@@ -1,11 +1,10 @@
 # 🚀 Tech Fest Mobile Companion App
 
-[![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://developer.android.com/)
-[![Language](https://img.shields.com/badge/Language-Kotlin-orange.svg)](https://kotlinlang.org/)
-[![UI](https://img.shields.com/badge/UI-XML_Layouts-blue.svg)](https://developer.android.com/)
-[![Backend](https://img.shields.com/badge/Backend-Firebase-FFCA28.svg)](https://firebase.google.com/)
-[![Status](https://img.shields.com/badge/Status-Completed-success)](/demovideo.mp4)
-[![License](https://img.shields.com/badge/License-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-Android-3DDC84.svg?style=flat-square)](https://developer.android.com/)
+[![Language](https://img.shields.io/badge/Language-Kotlin-7F52FF.svg?style=flat-square)](https://kotlinlang.org/)
+[![UI](https://img.shields.io/badge/UI-XML-4285F4.svg?style=flat-square)](https://developer.android.com/)
+[![Backend](https://img.shields.io/badge/Backend-Firebase-FFCA28.svg?style=flat-square)](https://firebase.google.com/)
+[![License](https://imgugs.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
 ## ✨ Project Summary
 
