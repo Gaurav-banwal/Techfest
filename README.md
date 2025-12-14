@@ -41,16 +41,17 @@ This application showcases full-stack mobile development capabilities across fiv
 | **Build System** | **Gradle** |
 
 ## 📹 Demo Video
+
 <p align="center">
-  <iframe width="560" height="315" 
-    src="https://www.youtube.com/embed/_1z3-reWxJA" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
+<iframe width="560" height="315" 
+  src="https://www.youtube.com/embed/_1z3-reWxJA" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen>
+</iframe>
 </p>
+
 [View Video on YouTube (Link)](http://www.youtube.com/watch?v=_1z3-reWxJA)
----
 
 
 [View Video on GitHub File Page](https://github.com/Gaurav-banwal/Techfest/blob/master/demovideo.mp4)
